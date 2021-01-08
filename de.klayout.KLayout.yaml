@@ -11,10 +11,8 @@ finish-args:
   - --device=dri
 modules:
   - name: gdbm
-    build-options:
-      cflags: -g -O2 -fcommon
-      config-opts:
-        - --enable-libgdbm-compat
+    config-opts:
+      - --enable-libgdbm-compat
     sources:
       - type: archive
         url: https://ftp.gnu.org/gnu/gdbm/gdbm-1.19.tar.gz
