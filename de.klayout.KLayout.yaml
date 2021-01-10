@@ -34,8 +34,8 @@ modules:
           url: https://www.ruby-lang.org/en/downloads/
           # version-pattern: The current stable version is ([\d\.]+)\.
           # url-pattern: (https://cache.ruby-lang.org/pub/ruby/[\d\.]+/ruby-[\d\.]+.tar.gz)
-          version-pattern: Ruby (2.[\d\.]+)\.
-          url-pattern: (https://cache.ruby-lang.org/pub/ruby/2.[\d\.]+/ruby-2.[\d\.]+.tar.gz)
+          version-pattern: Ruby (2.[\d\.]+)
+          url-template: "https://cache.ruby-lang.org/pub/ruby/$version/ruby-$version.tar.gz"
   - name: klayout
     buildsystem: simple
     build-commands:
