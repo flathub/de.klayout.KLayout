@@ -11,35 +11,31 @@ finish-args:
   - --device=dri
 modules:
   - name: gdbm
-    build-options:
-      cflags: -g -O2 -fcommon
-      config-opts:
-        - --enable-libgdbm-compat
+    config-opts:
+      - --enable-libgdbm-compat
     sources:
       - type: archive
-        url: https://ftp.gnu.org/gnu/gdbm/gdbm-1.18.1.tar.gz
-        sha256: 86e613527e5dba544e73208f42b78b7c022d4fa5a6d5498bf18c8d6f745b91dc
+        url: https://ftp.gnu.org/gnu/gdbm/gdbm-1.19.tar.gz
+        sha256: 37ed12214122b972e18a0d94995039e57748191939ef74115b1d41d8811364bc
         x-checker-data:
           type: html
           url: https://www.gnu.org.ua/software/gdbm/download.html
           version-pattern: gdbm-([\d\.]+).tar.gz
           url-template: https://ftp.gnu.org/gnu/gdbm/gdbm-$version.tar.gz
-        size: 941863
-
   - name: ruby
     config-opts:
       - --enable-shared
     sources:
       - type: archive
-        url: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.2.tar.gz
-        sha256: 6e5706d0d4ee4e1e2f883db9d768586b4d06567debea353c796ec45e8321c3d4
+        url: https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.1.tar.gz
+        sha256: d418483bdd0000576c1370571121a6eb24582116db0b7bb2005e90e250eae418
         x-checker-data:
           type: html
           url: https://www.ruby-lang.org/en/downloads/
-          version-pattern: The current stable version is ([\d\.]+)\.
-          url-pattern: (https://cache.ruby-lang.org/pub/ruby/[\d\.]+/ruby-[\d\.]+.tar.gz)
-        size: 16836767
-
+          # version-pattern: The current stable version is ([\d\.]+)\.
+          # url-pattern: (https://cache.ruby-lang.org/pub/ruby/[\d\.]+/ruby-[\d\.]+.tar.gz)
+          version-pattern: Ruby (2.[\d\.]+)\.
+          url-pattern: (https://cache.ruby-lang.org/pub/ruby/2.[\d\.]+/ruby-2.[\d\.]+.tar.gz)
   - name: klayout
     buildsystem: simple
     build-commands:
