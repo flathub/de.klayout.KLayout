@@ -35,7 +35,7 @@ modules:
           # version-pattern: The current stable version is ([\d\.]+)\.
           # url-pattern: (https://cache.ruby-lang.org/pub/ruby/[\d\.]+/ruby-[\d\.]+.tar.gz)
           version-pattern: Ruby (2.[\d\.]+)
-          url-template: "https://cache.ruby-lang.org/pub/ruby/$version/ruby-$version.tar.gz"
+          url-template: https://cache.ruby-lang.org/pub/ruby/$version/ruby-$version.tar.gz
   - name: klayout
     buildsystem: simple
     build-commands:
@@ -47,13 +47,12 @@ modules:
       - desktop-file-edit --set-icon=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop
     sources:
       - type: archive
-        url: https://www.klayout.org/downloads/source/klayout-0.26.9.tar.gz
-        sha256: 2b137f61da60f961514fd1cc4ff550a4efa8af814043d3291aa0c906ca999c8d
+        url: https://www.klayout.org/downloads/source/klayout-0.26.10.tar.gz
+        sha256: 7eccbfb21a094aba1d0f2d9701dbdb6fe668a312b27a7902a6a0820b3f85663b
         x-checker-data:
           type: html
           url: https://www.klayout.de/build.html
           version-pattern: klayout-([\d\.]+).tar.gz
           url-template: https://www.klayout.org/downloads/source/klayout-$version.tar.gz
-        size: 54223809
       - type: file
         path: de.klayout.KLayout.metainfo.xml
