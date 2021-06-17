@@ -15,8 +15,8 @@ modules:
       - --enable-libgdbm-compat
     sources:
       - type: archive
-        url: https://ftp.gnu.org/gnu/gdbm/gdbm-1.19.tar.gz
-        sha256: 37ed12214122b972e18a0d94995039e57748191939ef74115b1d41d8811364bc
+        url: https://ftp.gnu.org/gnu/gdbm/gdbm-1.20.tar.gz
+        sha256: 3aeac05648b3482a10a2da986b9f3a380a29ad650be80b9817a435fb8114a292
         x-checker-data:
           type: html
           url: https://www.gnu.org.ua/software/gdbm/download.html
