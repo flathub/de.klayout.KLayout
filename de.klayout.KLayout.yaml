@@ -15,8 +15,8 @@ modules:
       - --enable-libgdbm-compat
     sources:
       - type: archive
-        url: https://ftp.gnu.org/gnu/gdbm/gdbm-1.20.tar.gz
-        sha256: 3aeac05648b3482a10a2da986b9f3a380a29ad650be80b9817a435fb8114a292
+        url: https://ftp.gnu.org/gnu/gdbm/gdbm-1.21.tar.gz
+        sha256: b0b7dbdefd798de7ddccdd8edf6693a30494f7789777838042991ef107339cc2
         x-checker-data:
           type: html
           url: https://www.gnu.org.ua/software/gdbm/download.html
@@ -45,8 +45,8 @@ modules:
       - desktop-file-edit --set-icon=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop
     sources:
       - type: archive
-        url: https://www.klayout.org/downloads/source/klayout-0.27.3.tar.gz
-        sha256: 6ba01d10aa3270895e2a28cb0a4c5167152089f9e060340be0cc83678f730f36
+        url: https://www.klayout.org/downloads/source/klayout-0.27.4.tar.gz
+        sha256: 7dcd5859a183ef734aab1c840a4f9e0ed5c602d24b3b5fae7d2d0209b31f2cdf
         x-checker-data:
           type: html
           url: https://www.klayout.de/build.html
