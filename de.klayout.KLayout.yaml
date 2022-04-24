@@ -1,6 +1,6 @@
 app-id: de.klayout.KLayout
 runtime: org.kde.Platform
-runtime-version: '5.15-21.08'
+runtime-version: 5.15-21.08
 sdk: org.kde.Sdk
 command: klayout
 finish-args:
@@ -45,8 +45,8 @@ modules:
       - desktop-file-edit --set-icon=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop
     sources:
       - type: archive
-        url: https://www.klayout.org/downloads/source/klayout-0.27.8.tar.gz
-        sha256: 9bc8a5cce1cbc76fffc1a5c889123e3d67c7144c8fc7a418271607c38e322836
+        url: https://www.klayout.org/downloads/source/klayout-0.27.9.tar.gz
+        sha256: ea518088651ed9604a1dbf2e8dcca97866a165d59e86e2f55c2a07b9c15fd9e2
         x-checker-data:
           type: html
           url: https://www.klayout.de/build.html
