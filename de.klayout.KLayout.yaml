@@ -32,8 +32,7 @@ modules:
         x-checker-data:
           type: html
           url: https://www.ruby-lang.org/en/downloads/
-          version-pattern: The current stable version is ([\d\.]+)\.
-          url-pattern: (https://cache.ruby-lang.org/pub/ruby/[\d\.]+/ruby-[\d\.]+.tar.gz)
+          pattern: (https://cache.ruby-lang.org/pub/ruby/[\d\.]+/ruby-([\d\.]+).tar.gz)
   - name: klayout
     buildsystem: simple
     build-commands:
