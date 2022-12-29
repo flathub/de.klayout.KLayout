@@ -29,8 +29,7 @@ modules:
         x-checker-data:
           type: html
           url: https://pyyaml.org/wiki/LibYAML
-          version-pattern: yaml-([\d\.]+).tar.gz
-          url-template: http://pyyaml.org/download/libyaml/yaml-$version.tar.gz
+          pattern: (http://pyyaml.org/download/libyaml/yaml-([\d\.]+)\.tar\.gz)
   - name: ruby
     config-opts:
       - --enable-shared
@@ -41,7 +40,7 @@ modules:
         x-checker-data:
           type: html
           url: https://www.ruby-lang.org/en/downloads/
-          pattern: (https://cache.ruby-lang.org/pub/ruby/[\d\.]+/ruby-([\d\.]+).tar.gz)
+          pattern: (https://cache.ruby-lang.org/pub/ruby/[\d\.]+/ruby-([\d\.]+)\.tar\.gz)
   - name: klayout
     buildsystem: simple
     build-commands:
