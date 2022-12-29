@@ -22,6 +22,15 @@ modules:
           url: https://www.gnu.org.ua/software/gdbm/download.html
           version-pattern: gdbm-([\d\.]+).tar.gz
           url-template: https://ftp.gnu.org/gnu/gdbm/gdbm-$version.tar.gz
+  - name: libyaml
+    sources:
+      - type: archive
+        sha256: c642ae9b75fee120b2d96c712538bd2cf283228d2337df2cf2988e3c02678ef4
+        x-checker-data:
+          type: html
+          url: https://pyyaml.org/wiki/LibYAML
+          version-pattern: yaml-([\d\.]+).tar.gz
+          url-template: http://pyyaml.org/download/libyaml/yaml-$version.tar.gz
   - name: ruby
     config-opts:
       - --enable-shared
