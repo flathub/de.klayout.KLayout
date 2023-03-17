@@ -53,8 +53,8 @@ modules:
       - desktop-file-edit --set-icon=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop
     sources:
       - type: archive
-        url: https://www.klayout.org/downloads/source/klayout-0.28.5.tar.gz
-        sha256: fd00b7c5342ac4d2602568bf5ceb258ca88f0a2f45e9bb27f67f4fc52210a432
+        url: https://www.klayout.org/downloads/source/klayout-0.28.6.tar.gz
+        sha256: 4fd53c55b2ddb0608d6f82873f27dcd66f2d7b0544f0d9c1b0a1403b5e4959c7
         x-checker-data:
           type: html
           url: https://www.klayout.de/build.html
