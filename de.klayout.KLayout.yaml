@@ -80,9 +80,6 @@ modules:
       env:
         LIBRARY_PATH: /app/lib
     build-commands:
-      - echo "BUILDENV"
-      - env
-      - ls -l /app/lib
       - bash ./build.sh -bin ${FLATPAK_DEST}/bin -j$FLATPAK_BUILDER_N_JOBS
     post-install:
       - install -Dm644 de.klayout.KLayout.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
