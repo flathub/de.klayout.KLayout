@@ -77,10 +77,7 @@ modules:
   - name: klayout
     buildsystem: simple
     build-commands:
-      - bash ./build.sh -bin ${FLATPAK_DEST}/bin -j$FLATPAK_BUILDER_N_JOBS
-    build-options:
-      env:
-        BUILD_EXPERT: 1
+      - bash ./build.sh -expert -bin ${FLATPAK_DEST}/bin -j$FLATPAK_BUILDER_N_JOBS
     post-install:
       - install -Dm644 de.klayout.KLayout.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 etc/klayout.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
