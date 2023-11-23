@@ -78,7 +78,7 @@ modules:
     buildsystem: simple
     build-options:
       env:
-        - LIBRARY_PATH: /app/lib
+        LIBRARY_PATH: /app/lib
     build-commands:
       - echo "BUILDENV"
       - env
