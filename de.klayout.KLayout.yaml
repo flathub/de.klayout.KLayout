@@ -76,11 +76,14 @@ modules:
           pattern: (https://cache.ruby-lang.org/pub/ruby/[\d\.]+/ruby-([\d\.]+)\.tar\.gz)
   - name: klayout
     buildsystem: simple
+    build-options:
+      env:
+        - LIBRARY_PATH: /app/lib
     build-commands:
       - echo "BUILDENV"
       - env
       - ls -l /app/lib
-      - LIBRARY_PATH=/app/lib bash ./build.sh -bin ${FLATPAK_DEST}/bin -j$FLATPAK_BUILDER_N_JOBS
+      - bash ./build.sh -bin ${FLATPAK_DEST}/bin -j$FLATPAK_BUILDER_N_JOBS
     post-install:
       - install -Dm644 de.klayout.KLayout.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 etc/klayout.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
