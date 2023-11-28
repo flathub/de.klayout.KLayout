@@ -5,6 +5,7 @@ sdk: org.kde.Sdk
 command: klayout
 finish-args:
   - --share=ipc
+  - --share=network
   - --socket=x11
   - --socket=wayland
   - --filesystem=host
@@ -31,6 +32,38 @@ modules:
           type: html
           url: https://pyyaml.org/wiki/LibYAML
           pattern: (http://pyyaml.org/download/libyaml/yaml-([\d\.]+)\.tar\.gz)
+  - name: libssh2
+    sources:
+      - type: archive
+        buildsystem: cmake-ninja
+        config-opts:
+          - -DCMAKE_BUILD_TYPE=RelWithDebInfo
+          - -DCMAKE_INSTALL_LIBDIR:PATH=/app/lib
+          - -DBUILD_SHARED_LIBS:BOOL=ON
+        cleanup:
+          - /share/doc
+        url: https://www.libssh2.org/download/libssh2-1.11.0.tar.gz
+        sha256: 3736161e41e2693324deb38c26cfdc3efe6209d634ba4258db1cecff6a5ad461
+        x-checker-data:
+          type: anitya
+          project-id: 1730
+          url-template: https://www.libssh2.org/download/libssh2-$version.tar.gz
+  - name: libgit2
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
+      - -DBUILD_SHARED_LIBS:BOOL=ON
+      - -DBUILD_TESTS:BOOL=OFF
+      - -DUSE_SSH:BOOL=ON
+      - -DUSE_THREADS:BOOL=ON
+    sources:
+      - type: archive
+        url: https://github.com/libgit2/libgit2/archive/v1.7.1/libgit2-1.7.1.tar.gz
+        sha256: 17d2b292f21be3892b704dddff29327b3564f96099a1c53b00edc23160c71327
+        x-checker-data:
+          type: anitya
+          project-id: 1627
+          url-template: https://github.com/libgit2/libgit2/archive/v$version/libgit2-$version.tar.gz
   - name: ruby
     config-opts:
       - --enable-shared
@@ -44,6 +77,9 @@ modules:
           pattern: (https://cache.ruby-lang.org/pub/ruby/[\d\.]+/ruby-([\d\.]+)\.tar\.gz)
   - name: klayout
     buildsystem: simple
+    build-options:
+      env:
+        LIBRARY_PATH: /app/lib
     build-commands:
       - bash ./build.sh -bin ${FLATPAK_DEST}/bin -j$FLATPAK_BUILDER_N_JOBS
     post-install:
@@ -53,8 +89,8 @@ modules:
       - desktop-file-edit --set-icon=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop
     sources:
       - type: archive
-        url: https://www.klayout.org/downloads/source/klayout-0.28.12.tar.gz
-        sha256: 92353301dd87a556447b999b4cf452b6027ae65e40311cf3d8399e9df26d6343
+        url: https://www.klayout.org/downloads/source/klayout-0.28.13.tar.gz
+        sha256: 8f1a99ef4edbb974af2f470d924c4cc021bf3a78ec9f902dfac80336d6611900
         x-checker-data:
           type: html
           url: https://www.klayout.de/build.html
