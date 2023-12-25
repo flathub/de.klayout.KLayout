@@ -69,8 +69,8 @@ modules:
       - --enable-shared
     sources:
       - type: archive
-        url: https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.2.tar.gz
-        sha256: 96c57558871a6748de5bc9f274e93f4b5aad06cd8f37befa0e8d94e7b8a423bc
+        url: https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.0.tar.gz
+        sha256: 96518814d9832bece92a85415a819d4893b307db5921ae1f0f751a9a89a56b7d
         x-checker-data:
           type: html
           url: https://www.ruby-lang.org/en/downloads/
