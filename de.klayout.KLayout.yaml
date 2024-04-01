@@ -58,8 +58,8 @@ modules:
       - -DUSE_THREADS:BOOL=ON
     sources:
       - type: archive
-        url: https://github.com/libgit2/libgit2/archive/v1.7.2/libgit2-1.7.2.tar.gz
-        sha256: de384e29d7efc9330c6cdb126ebf88342b5025d920dcb7c645defad85195ea7f
+        url: https://github.com/libgit2/libgit2/archive/v1.8.0/libgit2-1.8.0.tar.gz
+        sha256: 9e1d6a880d59026b675456fbb1593c724c68d73c34c0d214d6eb848e9bbd8ae4
         x-checker-data:
           type: anitya
           project-id: 1627
@@ -89,8 +89,8 @@ modules:
       - desktop-file-edit --set-icon=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop
     sources:
       - type: archive
-        url: https://www.klayout.org/downloads/source/klayout-0.28.17.tar.gz
-        sha256: 1cf2c46823e56c134b2936aa4536dbe3f0dccc95f117f0bd7a7d5b4ff4b619ec
+        url: https://www.klayout.org/downloads/source/klayout-0.29.0.tar.gz
+        sha256: 8ffbf6178d5c7fa4e4dff6edb6d176e86a890bb9d9bc64e033864908936c0965
         x-checker-data:
           type: html
           url: https://www.klayout.de/build.html
