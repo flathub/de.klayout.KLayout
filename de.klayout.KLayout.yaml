@@ -16,8 +16,8 @@ modules:
       - --enable-libgdbm-compat
     sources:
       - type: archive
-        url: https://ftp.gnu.org/gnu/gdbm/gdbm-1.23.tar.gz
-        sha256: 74b1081d21fff13ae4bd7c16e5d6e504a4c26f7cde1dca0d963a484174bbcacd
+        url: https://ftp.gnu.org/gnu/gdbm/gdbm-1.24.tar.gz
+        sha256: 695e9827fdf763513f133910bc7e6cfdb9187943a4fec943e57449723d2b8dbf
         x-checker-data:
           type: html
           url: https://www.gnu.org.ua/software/gdbm/download.html
@@ -69,8 +69,8 @@ modules:
       - --enable-shared
     sources:
       - type: archive
-        url: https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.3.tar.gz
-        sha256: 83c05b2177ee9c335b631b29b8c077b4770166d02fa527f3a9f6a40d13f3cce2
+        url: https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.4.tar.gz
+        sha256: fe6a30f97d54e029768f2ddf4923699c416cdbc3a6e96db3e2d5716c7db96a34
         x-checker-data:
           type: html
           url: https://www.ruby-lang.org/en/downloads/
