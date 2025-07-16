@@ -33,15 +33,15 @@ modules:
           url: https://pyyaml.org/wiki/LibYAML
           pattern: (http://pyyaml.org/download/libyaml/yaml-([\d\.]+)\.tar\.gz)
   - name: libssh2
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
+      - -DCMAKE_INSTALL_LIBDIR:PATH=/app/lib
+      - -DBUILD_SHARED_LIBS:BOOL=ON
+    cleanup:
+      - /share/doc
     sources:
       - type: archive
-        buildsystem: cmake-ninja
-        config-opts:
-          - -DCMAKE_BUILD_TYPE=RelWithDebInfo
-          - -DCMAKE_INSTALL_LIBDIR:PATH=/app/lib
-          - -DBUILD_SHARED_LIBS:BOOL=ON
-        cleanup:
-          - /share/doc
         url: https://www.libssh2.org/download/libssh2-1.11.1.tar.gz
         sha256: d9ec76cbe34db98eec3539fe2c899d26b0c837cb3eb466a56b0f109cabf658f7
         x-checker-data:
