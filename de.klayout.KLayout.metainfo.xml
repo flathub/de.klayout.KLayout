@@ -21,6 +21,7 @@
   <icon type="remote" height="256" width="256">https://raw.githubusercontent.com/KLayout/klayout/master/etc/logo.png</icon>
   <screenshots>
     <screenshot type="default">
+      <caption>The main KLayout user interface showing the visualization of a multilayered GDS file</caption>
       <image>https://www.klayout.de/intro-image.png</image>
     </screenshot>
   </screenshots>
