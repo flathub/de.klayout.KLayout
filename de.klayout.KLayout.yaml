@@ -10,19 +10,9 @@ finish-args:
   - --socket=wayland
   - --filesystem=host
   - --device=dri
+cleanup:
+  - /share/doc
 modules:
-  - name: gdbm
-    config-opts:
-      - --enable-libgdbm-compat
-    sources:
-      - type: archive
-        url: https://ftp.gnu.org/gnu/gdbm/gdbm-1.26.tar.gz
-        sha256: 6a24504a14de4a744103dcb936be976df6fbe88ccff26065e54c1c47946f4a5e
-        x-checker-data:
-          type: html
-          url: https://www.gnu.org.ua/software/gdbm/download.html
-          version-pattern: gdbm-([\d\.]+).tar.gz
-          url-template: https://ftp.gnu.org/gnu/gdbm/gdbm-$version.tar.gz
   - name: libyaml
     sources:
       - type: archive
@@ -38,8 +28,6 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DCMAKE_INSTALL_LIBDIR:PATH=/app/lib
       - -DBUILD_SHARED_LIBS:BOOL=ON
-    cleanup:
-      - /share/doc
     sources:
       - type: archive
         url: https://www.libssh2.org/download/libssh2-1.11.1.tar.gz
