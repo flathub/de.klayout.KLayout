@@ -33,8 +33,11 @@
   </provides>
 
   <releases>
-      <release version="0.30.11" date="2026-08-24">
+      <release version="0.30.12" date="2026-08-26">
          <description></description>
+      </release>
+      <release version="0.30.11" date="2026-08-24">
+         <description/>
       </release>
       <release version="0.30.10" date="2026-07-28">
          <description/>
