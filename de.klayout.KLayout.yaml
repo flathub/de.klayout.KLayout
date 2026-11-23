@@ -57,8 +57,8 @@ modules:
       - --enable-shared
     sources:
       - type: archive
-        url: https://cache.ruby-lang.org/pub/ruby/4.0/ruby-4.0.9.tar.gz
-        sha256: c35350682ff050b79702d57ade4516e7336063f510155d19fb2fb5b3f3909511
+        url: https://cache.ruby-lang.org/pub/ruby/4.0/ruby-4.0.10.tar.gz
+        sha256: b53eef3371fa5d3e3b74340edcd015f06d5d8853968d4e539a5264fce41ed9f1
         x-checker-data:
           type: html
           url: https://www.ruby-lang.org/en/downloads/
@@ -77,8 +77,8 @@ modules:
       - desktop-file-edit --set-icon=${FLATPAK_ID} /app/share/applications/${FLATPAK_ID}.desktop
     sources:
       - type: archive
-        url: https://www.klayout.org/downloads/source/klayout-0.30.13.tar.gz
-        sha256: fe6e937f77f4c50d72500312f439a66b5f4560ab687cbc4469c3814bbdbb0ec9
+        url: https://www.klayout.org/downloads/source/klayout-0.30.14.tar.gz
+        sha256: 46feb5fb47a18c7325c5af86d0be044e06c46d3b71c88c1687272d3347a75a4e
         x-checker-data:
           type: html
           url: https://www.klayout.de/build.html
